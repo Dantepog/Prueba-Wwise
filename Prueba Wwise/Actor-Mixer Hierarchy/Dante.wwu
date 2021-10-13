@@ -61,23 +61,21 @@
 				</Sound>
 				<Folder Name="puerta lacer" ID="{D7F5C29F-B49D-482A-8A76-78FBB81A57BB}" ShortID="146684756">
 					<ChildrenList>
-						<RandomSequenceContainer Name="stand" ID="{67DEA5D2-6B5E-42A3-B901-368D3DEDB725}" ShortID="514764132">
+						<BlendContainer Name="StandPuerta" ID="{0D4BFDA8-3482-43F8-ACBC-25F126EC5F7E}" ShortID="150789958">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{F8B1DDB3-3C8B-4F8D-BDBB-515613B6601D}">
+											<Modifier Name="" ID="{DFB56C16-F4D5-420B-A800-F6A34545D398}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
-								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -88,7 +86,38 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Puerta laser stand reverse" ID="{F5134209-71AA-42F4-AFCE-17B8F343EE7C}" ShortID="317540011">
+								<RandomSequenceContainer Name="stand" ID="{67DEA5D2-6B5E-42A3-B901-368D3DEDB725}" ShortID="514764132">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{B89B976B-EDB1-449C-A58C-E7BD51B1E9D2}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="6"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{F8B1DDB3-3C8B-4F8D-BDBB-515613B6601D}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DDF2AAB9-F338-4E8B-A0C9-3838DA732B77}"/>
@@ -98,28 +127,94 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Puerta laser stand reverse" ID="{588ABAA4-5CC3-4940-87BE-10F96B979281}">
-											<PropertyList>
-												<Property Name="CrossfadeDuration" Type="Real64" Value="131.174"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0.715643455884226"/>
-												<Property Name="LoopEnd" Type="Real64" Value="1.68798510790084"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.614519924074499"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.87467470508803"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Puerta laser stand reverse.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="818551293"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="Puerta laser stand reverse" ID="{F5134209-71AA-42F4-AFCE-17B8F343EE7C}" ShortID="317540011">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DDF2AAB9-F338-4E8B-A0C9-3838DA732B77}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0B81B0-2662-4895-A668-6C3276D9C584}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Puerta laser stand reverse" ID="{588ABAA4-5CC3-4940-87BE-10F96B979281}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="131.174"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0.715643455884226"/>
+														<Property Name="LoopEnd" Type="Real64" Value="1.68798510790084"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.614519924074499"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.87467470508803"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Puerta laser stand reverse.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="818551293"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Puerta laser stand reverse" ID="{588ABAA4-5CC3-4940-87BE-10F96B979281}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Puerta laser stand" ID="{4C104261-6CFA-4560-83DA-322CF04B48D5}" ShortID="154651666">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DDF2AAB9-F338-4E8B-A0C9-3838DA732B77}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0B81B0-2662-4895-A668-6C3276D9C584}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Puerta laser stand" ID="{63EA8465-7F33-4040-8950-C5E2A8BA9732}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="87.449"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0.891957756885526"/>
+														<Property Name="LoopEnd" Type="Real64" Value="1.72687170373767"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.798613340467273"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.84095932380443"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Puerta laser stand.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="508816980"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Puerta laser stand" ID="{63EA8465-7F33-4040-8950-C5E2A8BA9732}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Puerta laser stand reverse" ID="{588ABAA4-5CC3-4940-87BE-10F96B979281}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Puerta laser stand" ID="{4C104261-6CFA-4560-83DA-322CF04B48D5}" ShortID="154651666">
+								</RandomSequenceContainer>
+								<Sound Name="tubo luz" ID="{DE7D74B9-88B6-4070-BF41-60090476F5C5}" ShortID="37431982">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-500</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{1204F2AD-B1DD-47B3-B492-D7B7ACAA771E}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DDF2AAB9-F338-4E8B-A0C9-3838DA732B77}"/>
@@ -129,30 +224,22 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Puerta laser stand" ID="{63EA8465-7F33-4040-8950-C5E2A8BA9732}">
-											<PropertyList>
-												<Property Name="CrossfadeDuration" Type="Real64" Value="87.449"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0.891957756885526"/>
-												<Property Name="LoopEnd" Type="Real64" Value="1.72687170373767"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.798613340467273"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.84095932380443"/>
-											</PropertyList>
+										<AudioFileSource Name="tubo luz" ID="{AFBFB029-A431-4D24-9B1D-5203B0171787}">
 											<Language>SFX</Language>
-											<AudioFile>Puerta laser stand.wav</AudioFile>
+											<AudioFile>tubo luz.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="508816980"/>
+												<MediaID ID="584396417"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="Puerta laser stand" ID="{63EA8465-7F33-4040-8950-C5E2A8BA9732}" Platform="Linked"/>
+										<ActiveSource Name="tubo luz" ID="{AFBFB029-A431-4D24-9B1D-5203B0171787}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 							<ObjectLists/>
-						</RandomSequenceContainer>
+						</BlendContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
