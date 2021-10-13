@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A136523B-230A-4BD0-813C-62D7EDFC087A}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{A136523B-230A-4BD0-813C-62D7EDFC087A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A136523B-230A-4BD0-813C-62D7EDFC087A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="play_puertalacer_stand" ID="{FE707028-71D3-40BA-8BE1-5C924F81DAED}">
+					<ChildrenList>
+						<Action Name="" ID="{22D0D31E-8CB0-4831-989D-26D11E4FEC07}" ShortID="373198287">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="stand" ID="{67DEA5D2-6B5E-42A3-B901-368D3DEDB725}" WorkUnitID="{0ED05D06-C2BD-4BAF-9375-E4BA9623A95A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_puerta_laser_in" ID="{4F0362EB-7A80-445A-856D-AD68AA745FF2}">
+					<ChildrenList>
+						<Action Name="" ID="{850DBCFE-DB7D-41E5-BA88-94173D1EF77E}" ShortID="1059503492">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puerta laser in" ID="{DE25610B-F613-454B-8EB4-9E9C6ED44021}" WorkUnitID="{0ED05D06-C2BD-4BAF-9375-E4BA9623A95A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_puerta_laser_out" ID="{2C94837F-C557-4432-BA34-3A6CFF0839CB}">
+					<ChildrenList>
+						<Action Name="" ID="{9881F648-B631-4332-90A7-5DA9093E8889}" ShortID="649083070">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puerta laser out" ID="{2BE77F9D-9826-4A68-8B15-A72B7658BBD0}" WorkUnitID="{0ED05D06-C2BD-4BAF-9375-E4BA9623A95A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1FD2EAC6-1F17-4CBF-8745-E294A555730C}" ShortID="946009374">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="stand" ID="{67DEA5D2-6B5E-42A3-B901-368D3DEDB725}" WorkUnitID="{0ED05D06-C2BD-4BAF-9375-E4BA9623A95A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
